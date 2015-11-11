@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{9A3E2E71-FB4D-F7DD-66C5-8FF0A68AB2A0}</ProjectGuid>
+	<ProjectGuid>{4D466C28-BA8F-6E3A-1DE2-87011CDD9002}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -48,6 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\MoveRigibodyObject.cs" />
      <Compile Include="Assets\Scripts\OnCollisionDeath.cs" />
+     <Compile Include="Assets\Scripts\Pause.cs" />
+     <Compile Include="Assets\Scripts\PushObject.cs" />
+     <Compile Include="Assets\Scripts\Quit.cs" />
+     <Compile Include="Assets\Scripts\Tuto.cs" />
      <Compile Include="Assets\Scripts\UpdateScore.cs" />
      <Compile Include="Assets\TerrainToolkit\TerrainToolkit.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
@@ -59,9 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{E4EED717-7854-DA86-E448-5F78D7CA4BD9}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{C039F424-7894-9F7B-2138-3893EC955E7F}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{B24F1E14-A830-4986-3C35-94B3A776A4AD}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+      <Project>{A1050242-5245-12BC-67C0-23E322D46484}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

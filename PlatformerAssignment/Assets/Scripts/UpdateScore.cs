@@ -6,7 +6,7 @@ public class UpdateScore : MonoBehaviour {
 
 	[SerializeField]
 	 Text score;
-
+	
 	private uint val;
 
 	// Use this for initialization

@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PushObject.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Pause.cs" Line="30" Column="25" />
+      <File FileName="Assets\Scripts\UpdateScore.cs" Line="10" Column="1" />
+      <File FileName="Assets\Scripts\OnCollisionDeath.cs" Line="36" Column="1" />
+      <File FileName="Assets\Scripts\MoveRigibodyObject.cs" Line="59" Column="1" />
+      <File FileName="Assets\Scripts\PushObject.cs" Line="22" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

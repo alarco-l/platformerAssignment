@@ -56,7 +56,6 @@ public class MoveRigibodyObject : MonoBehaviour {
 	{
 		if (collider.gameObject.tag == "Player")
 		{
-			Debug.Log (collider.gameObject.tag);
 			body.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ
 				| RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 			AddImpact((collider.relativeVelocity * hitForce)*-1);
