@@ -4,10 +4,60 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Component1
+    100004: Component1.Component0
+    100006: Component1.Component2
+    100008: Component1.Component4
+    100010: Component1.Component6
+    100012: Component1.Component7
+    100014: Component1.Component8
+    100016: Component1.Component9
+    100018: Component3
+    100020: skp1DD3_00
     400000: //RootNode
+    400002: Component1
+    400004: Component1.Component0
+    400006: Component1.Component2
+    400008: Component1.Component4
+    400010: Component1.Component6
+    400012: Component1.Component7
+    400014: Component1.Component8
+    400016: Component1.Component9
+    400018: Component3
+    400020: skp1DD3_00
     2300000: //RootNode
+    2300002: Component1
+    2300004: Component1.Component0
+    2300006: Component1.Component2
+    2300008: Component1.Component4
+    2300010: Component1.Component6
+    2300012: Component1.Component7
+    2300014: Component1.Component8
+    2300016: Component1.Component9
+    2300018: Component3
+    2300020: skp1DD3_00
     3300000: //RootNode
+    3300002: Component1
+    3300004: Component1.Component0
+    3300006: Component1.Component2
+    3300008: Component1.Component4
+    3300010: Component1.Component6
+    3300012: Component1.Component7
+    3300014: Component1.Component8
+    3300016: Component1.Component9
+    3300018: Component3
+    3300020: skp1DD3_00
     4300000: Switch
+    4300002: Component3
+    4300004: Component1
+    4300006: Component1.Component0
+    4300008: Component1.Component2
+    4300010: Component1.Component4
+    4300012: Component1.Component6
+    4300014: Component1.Component7
+    4300016: Component1.Component8
+    4300018: Component1.Component9
+    4300020: skp1DD3_00
     9500000: //RootNode
   materials:
     importMaterials: 1

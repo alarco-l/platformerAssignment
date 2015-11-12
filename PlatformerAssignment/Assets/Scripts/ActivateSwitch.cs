@@ -4,6 +4,8 @@ using System.Collections;
 public class ActivateSwitch : MonoBehaviour {
 	[SerializeField]
 	Animation anim;
+	[SerializeField]
+	GameObject platform;
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +17,10 @@ public class ActivateSwitch : MonoBehaviour {
 	
 	}
 	void OnTriggerEnter(Collider collider) {
+		Debug.Log (collider.gameObject.tag);
 		if (collider.gameObject.tag == "Player") {
 			anim.enabled = true;
+			platform.GetComponent<DownPlatform>().isFall = true;
 			}
 		}
 }

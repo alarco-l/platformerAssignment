@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class OnCollisionDeath : MonoBehaviour {
 
@@ -8,11 +9,14 @@ public class OnCollisionDeath : MonoBehaviour {
 	Transform transformPlayer;
 	[SerializeField]
 	CharacterController player;
+	[SerializeField]
+	Text annoucment;
 
 	private Vector3 checkPoint;
 	private uint score;
 	bool onStart = false;
 	private List<GameObject> diamonds;
+	private Color color;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +34,8 @@ public class OnCollisionDeath : MonoBehaviour {
 		yield return new WaitForSeconds(sec);
 		transformPlayer.position = checkPoint;
 		player.velocity.Set (0,0,0);
+		annoucment.text = "";
+		annoucment.color = color;
 	}
 
 	void OnTriggerEnter(Collider collider) {
@@ -37,9 +43,12 @@ public class OnCollisionDeath : MonoBehaviour {
 		{
 			if (onStart)
 				return;
-			StartCoroutine(repop(1));
+			StartCoroutine(repop(3));
 			UpdateScore.val -= score;
 			score = 0;
+			color = annoucment.color;
+			annoucment.color = Color.black;
+			annoucment.text = "You are Dead ! \n Respawn in progress...";
 			foreach (GameObject go in diamonds)
 			{
 				go.SetActive(true);
@@ -58,7 +67,9 @@ public class OnCollisionDeath : MonoBehaviour {
 			collider.gameObject.SetActive(false);
 			score += 20;
 			diamonds.Add(collider.gameObject);
-
+		}
+		if (collider.gameObject.tag == "Announcement") {
+			annoucment.text = "Push and use box to activate the switch";
 		}
 	}
 
@@ -66,6 +77,9 @@ public class OnCollisionDeath : MonoBehaviour {
 	{
 		if (collider.gameObject.tag == "Start") {
 			onStart = false;
+		}
+		if (collider.gameObject.tag == "Announcement") {
+			annoucment.text = "";
 		}
 	}
 }
