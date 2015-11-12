@@ -7,7 +7,7 @@ public class UpdateScore : MonoBehaviour {
 	[SerializeField]
 	 Text score;
 	
-	private uint val;
+	static public uint val;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +22,7 @@ public class UpdateScore : MonoBehaviour {
 
 	void OnTriggerEnter(Collider collider) {
 		if (collider.gameObject.tag == "Score") {
-			val += 10;
+			val += 20;
 		}
 	}
 }

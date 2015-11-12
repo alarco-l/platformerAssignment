@@ -1,12 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PushObject.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="D:\Programming\Unity Project\PlatformerAssignment\Assets\Scripts\OnCollisionDeath.cs">
     <Files>
-      <File FileName="Assets\Scripts\Pause.cs" Line="30" Column="25" />
-      <File FileName="Assets\Scripts\UpdateScore.cs" Line="10" Column="1" />
-      <File FileName="Assets\Scripts\OnCollisionDeath.cs" Line="36" Column="1" />
-      <File FileName="Assets\Scripts\MoveRigibodyObject.cs" Line="59" Column="1" />
-      <File FileName="Assets\Scripts\PushObject.cs" Line="22" Column="1" />
+      <File FileName="D:\Programming\Unity Project\PlatformerAssignment\Assets\Scripts\OnCollisionDeath.cs" Line="50" Column="21" />
+      <File FileName="D:\Programming\Unity Project\PlatformerAssignment\Assets\Scripts\UpdateScore.cs" Line="9" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
