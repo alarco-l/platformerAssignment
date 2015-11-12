@@ -17,7 +17,6 @@ public class ActivateSwitch : MonoBehaviour {
 	
 	}
 	void OnTriggerEnter(Collider collider) {
-		Debug.Log (collider.gameObject.tag);
 		if (collider.gameObject.tag == "Player") {
 			anim.enabled = true;
 			platform.GetComponent<DownPlatform>().isFall = true;

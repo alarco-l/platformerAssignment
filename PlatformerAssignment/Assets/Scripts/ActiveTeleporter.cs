@@ -5,7 +5,10 @@ using UnityEngine.UI;
 public class ActiveTeleporter : MonoBehaviour {
 	[SerializeField]
 	GameObject teleporter;
-
+	[SerializeField]
+	Image img;
+	[SerializeField]
+	Sprite sprite;
 	[SerializeField]
 	Text announcement;
 
@@ -18,16 +21,14 @@ public class ActiveTeleporter : MonoBehaviour {
 	void Update () {
 	
 	}
-
+	
 	void OnTriggerEnter(Collider collider) {
 		if (collider.gameObject.tag == "Player") {
 			teleporter.SetActive (true);
+			img.sprite = sprite;
 			announcement.text = "Use the teleporter";
+
 		}
 	}
 
-	void OnTriggerExit(Collider collider) {
-		if (collider.gameObject.tag == "Player")
-			announcement.text = "";
-	}
 }

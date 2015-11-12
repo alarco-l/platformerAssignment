@@ -48,7 +48,7 @@ public class OnCollisionDeath : MonoBehaviour {
 			score = 0;
 			color = annoucment.color;
 			annoucment.color = Color.black;
-			annoucment.text = "You are Dead ! \n Respawn in progress...";
+			annoucment.text = "You are Dead ! \n Respawn in progress... \n\n If you do not see diamonds you are already passed on this way";
 			foreach (GameObject go in diamonds)
 			{
 				go.SetActive(true);

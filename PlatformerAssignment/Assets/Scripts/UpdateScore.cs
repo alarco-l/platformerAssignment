@@ -6,10 +6,6 @@ public class UpdateScore : MonoBehaviour {
 
 	[SerializeField]
 	 Text score;
-	[SerializeField]
-	Image island;
-	[SerializeField]
-	Sprite islandImg;
 
 	static public uint val;
 
@@ -29,7 +25,6 @@ public class UpdateScore : MonoBehaviour {
 			val += 20;
 		}
 		if (collider.gameObject.tag == "ObjectEnd") {
-			island.sprite = islandImg;
 			collider.gameObject.SetActive(false);
 		}
 	}
