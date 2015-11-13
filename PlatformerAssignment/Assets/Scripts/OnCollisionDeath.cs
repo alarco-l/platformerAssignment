@@ -25,6 +25,7 @@ public class OnCollisionDeath : MonoBehaviour {
 	AudioSource audio;
 
 	public AudioClip respawn;
+	public AudioClip death;
 	private Vector3 checkPoint;
 	private uint score;
 	bool onStart = false;
@@ -67,6 +68,10 @@ public class OnCollisionDeath : MonoBehaviour {
 		{
 			if (onStart)
 				return;
+			if (!audio.isPlaying) {
+				audio.clip = death;
+				audio.Play ();
+			}
 			controller.enabled = false;
 			mouseLook.enabled = false;
 			motor.enabled = false;
