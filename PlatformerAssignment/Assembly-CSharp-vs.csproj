@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\ActivateTorch.cs" />
      <Compile Include="Assets\Scripts\ActiveTeleporter.cs" />
      <Compile Include="Assets\Scripts\DownPlatform.cs" />
+     <Compile Include="Assets\Scripts\EntranceCave.cs" />
      <Compile Include="Assets\Scripts\MoveRigibodyObject.cs" />
      <Compile Include="Assets\Scripts\OnCollisionDeath.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />
@@ -60,8 +61,10 @@
      <Compile Include="Assets\Scripts\Tuto.cs" />
      <Compile Include="Assets\Scripts\UpdateScore.cs" />
      <Compile Include="Assets\TerrainToolkit\TerrainToolkit.cs" />
+     <None Include="Assets\Shaders\Depth.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Shaders\End_Cave.shader" />
      <None Include="Assets\TerrainToolkit\Read me.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/SawDarky/Desktop/platformerAssignment/PlatformerAssignment/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
