@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ActivateSwitch.cs" />
+     <Compile Include="Assets\Scripts\ActivateTorch.cs" />
      <Compile Include="Assets\Scripts\ActiveTeleporter.cs" />
      <Compile Include="Assets\Scripts\DownPlatform.cs" />
      <Compile Include="Assets\Scripts\MoveRigibodyObject.cs" />

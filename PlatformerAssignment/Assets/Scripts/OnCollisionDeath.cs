@@ -11,17 +11,29 @@ public class OnCollisionDeath : MonoBehaviour {
 	CharacterController player;
 	[SerializeField]
 	Text annoucment;
+	[SerializeField]
+	MouseLook mouseLook;
+	[SerializeField]
+	CharacterController controller;
+	[SerializeField]
+	MouseLook mouseLookY;
+	[SerializeField]
+	CharacterMotor motor;
+	[SerializeField]
+	FPSInputController input;
 
 	private Vector3 checkPoint;
 	private uint score;
 	bool onStart = false;
 	private List<GameObject> diamonds;
+	private List<GameObject> torch;
 	private Color color;
 
 	// Use this for initialization
 	void Start () {
 		score = 0;
 		diamonds = new List<GameObject>();
+		torch = new List<GameObject>();
 	}
 	
 	// Update is called once per frame
@@ -36,6 +48,11 @@ public class OnCollisionDeath : MonoBehaviour {
 		player.velocity.Set (0,0,0);
 		annoucment.text = "";
 		annoucment.color = color;
+		controller.enabled = true;
+		mouseLook.enabled = true;
+		motor.enabled = true;
+		mouseLookY.enabled = true;
+		input.enabled = true;
 	}
 
 	void OnTriggerEnter(Collider collider) {
@@ -43,23 +60,47 @@ public class OnCollisionDeath : MonoBehaviour {
 		{
 			if (onStart)
 				return;
+			controller.enabled = false;
+			mouseLook.enabled = false;
+			motor.enabled = false;
+			mouseLookY.enabled = false;
+			input.enabled = false;
 			StartCoroutine(repop(3));
 			UpdateScore.val -= score;
 			score = 0;
 			color = annoucment.color;
 			annoucment.color = Color.black;
-			annoucment.text = "You are Dead ! \n Respawn in progress... \n\n If you do not see diamonds you are already passed on this way";
-			foreach (GameObject go in diamonds)
+			annoucment.text = "You are Dead ! \n Respawn in progress... \n\n If torchs are ignited, you are already passed on this way";
+			if (diamonds.Count > 0)
 			{
-				go.SetActive(true);
+				foreach (GameObject go in diamonds)
+				{
+					go.SetActive(true);
+				}
+				diamonds.Clear();
 			}
-			diamonds.Clear();
+			ParticleEmitter []tmp;
+			if (torch.Count > 0)
+			{
+				foreach (GameObject go in torch)
+				{
+					tmp = go.GetComponentsInChildren<ParticleEmitter>();
+					foreach (ParticleEmitter co in tmp)
+					{
+						co.enabled = true;
+					}
+				}
+				torch.Clear();
+			}
 		}
 		if (collider.gameObject.tag == "CheckPoint")
 		{
 			checkPoint = collider.gameObject.transform.position;
 			score = 0;
-			diamonds.Clear();
+			if (diamonds.Count > 0)
+				diamonds.Clear();
+			if (torch.Count > 0)
+				torch.Clear();
 		}
 		if (collider.gameObject.tag == "Start")
 			onStart = true;
@@ -70,6 +111,9 @@ public class OnCollisionDeath : MonoBehaviour {
 		}
 		if (collider.gameObject.tag == "Announcement") {
 			annoucment.text = "Push and use box to activate the switch";
+		}
+		if (collider.gameObject.tag == "Torch") {
+			torch.Add(collider.gameObject);
 		}
 	}
 
