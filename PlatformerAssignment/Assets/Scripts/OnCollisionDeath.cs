@@ -21,7 +21,10 @@ public class OnCollisionDeath : MonoBehaviour {
 	CharacterMotor motor;
 	[SerializeField]
 	FPSInputController input;
+	[SerializeField]
+	AudioSource audio;
 
+	public AudioClip respawn;
 	private Vector3 checkPoint;
 	private uint score;
 	bool onStart = false;
@@ -44,6 +47,10 @@ public class OnCollisionDeath : MonoBehaviour {
 	IEnumerator repop(int sec)
 	{
 		yield return new WaitForSeconds(sec);
+		if (!audio.isPlaying) {
+			audio.clip = respawn;
+			audio.Play ();
+		}
 		transformPlayer.position = checkPoint;
 		player.velocity.Set (0,0,0);
 		annoucment.text = "";

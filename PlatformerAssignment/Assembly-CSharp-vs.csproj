@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\MoveRigibodyObject.cs" />
      <Compile Include="Assets\Scripts\OnCollisionDeath.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />
+     <Compile Include="Assets\Scripts\PlaySound.cs" />
      <Compile Include="Assets\Scripts\PushObject.cs" />
      <Compile Include="Assets\Scripts\Quit.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />

@@ -4,6 +4,7 @@ using System.Collections;
 public class EntranceCave : MonoBehaviour {
 	[SerializeField]
 	TerrainCollider col;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -25,6 +26,7 @@ public class EntranceCave : MonoBehaviour {
 	{
 		if (collider.gameObject.tag == "Player") {
 			col.enabled = true;
+
 		}
 	}
 }
