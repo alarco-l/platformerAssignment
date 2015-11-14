@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class StartGame : MonoBehaviour {
 
 	[SerializeField]
-	Text annoucment;
+	Text announcement;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class StartGame : MonoBehaviour {
 	{
 		if (collider.gameObject.tag == "Player")
 		{
-			annoucment.text = "Wait for the platform instead of jump";
+			announcement.text = "Wait for the platform instead of jump";
 		}
 	}
 
@@ -29,7 +29,7 @@ public class StartGame : MonoBehaviour {
 	{
 		if (collider.gameObject.tag == "Player")
 		{
-			annoucment.text = "";
+			announcement.text = "";
 		}
 	}
 

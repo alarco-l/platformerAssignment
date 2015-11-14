@@ -11,9 +11,13 @@ public class ActiveTeleporter : MonoBehaviour {
 	Sprite sprite;
 	[SerializeField]
 	Text announcement;
+    [SerializeField]
+    ParticleSystem HaloTeleporter;
+    [SerializeField]
+    ParticleSystem HaloPortal;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -27,8 +31,9 @@ public class ActiveTeleporter : MonoBehaviour {
 			teleporter.SetActive (true);
 			img.sprite = sprite;
 			announcement.text = "Use the teleporter";
-
-		}
+            HaloTeleporter.Play();
+            HaloPortal.Play();
+        }
 	}
 
 }
