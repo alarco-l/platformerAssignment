@@ -2,10 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OnCollisionDeath.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlaySound.cs" Line="29" Column="6" />
+      <File FileName="Assets\Scripts\PlaySound.cs" Line="25" Column="1" />
       <File FileName="Assets\Scripts\UpdateScore.cs" Line="27" Column="44" />
       <File FileName="Assets\Shaders\Depth.shader" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\OnCollisionDeath.cs" Line="51" Column="24" />
+      <File FileName="Assets\Scripts\OnCollisionDeath.cs" Line="72" Column="23" />
       <File FileName="Assets\Scripts\ActiveTeleporter.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DownPlatform.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\StartGame.cs" Line="1" Column="1" />
